@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>My AngularJS App</title>
+	<title>Waffle Chat</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
@@ -12,10 +12,6 @@
 	<script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-
-    <div ng-controller="loginCtrl as ctrl">
-        {{ctrl.loginState|json}}
-    </div>
 
     <div ng-view></div>
 
@@ -28,8 +24,13 @@
     <script src="http://localhost:3000/socket.io/socket.io.js"></script>
     <script src="app.js"></script>
     <script src="components/socket-service.js"></script>
-    <script src="components/login-service.js"></script>
-    <script src="views/login/login-controller.js"></script>
-    <script src="views/chat/main-controller.js"></script>
+	<script src="components/user-state-service.js"></script>
+	<script src="components/room-service.js"></script>
+	<script src="components/message-service.js"></script>
+	<script src="views/login/login-directive.js"></script>
+	<script src="views/chat/rooms-directive.js"></script>
+	<script src="views/chat/message-list-directive.js"></script>
+	<script src="views/chat/message-box-directive.js"></script>
+	<script src="views/chat/main-controller.js"></script>
 </body>
 </html>

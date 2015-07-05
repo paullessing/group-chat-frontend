@@ -1,3 +1,3 @@
-angular.module('WaffleApp').controller('mainCtrl', [ 'LoginService', function(loginService) {
-	this.userState = loginService.state;
+angular.module('WaffleApp').controller('mainCtrl', [ 'UserStateService', function(userStateService) {
+	this.userState = userStateService.state;
 } ]);

@@ -6,10 +6,10 @@ angular.module('WaffleApp', [
 	'ngRoute'
 ]).config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/login', {
-		templateUrl: 'views/login/login.html',
+		template: '<waffle-login/>',
 		resolve: {
-			auth: ['$q', '$location', 'LoginService', function($q, $location, loginService) {
-				if (loginService.isLoggedIn()) {
+			auth: ['$q', '$location', 'UserStateService', function($q, $location, userStateService) {
+				if (userStateService.isAuthenticated) {
 					$location.path('/');
 					$location.replace();
 					$q.reject(new Error('Already Logged in'));
@@ -20,8 +20,8 @@ angular.module('WaffleApp', [
 	.when('/', {
 		templateUrl: 'views/chat/chat.html',
 		resolve: {
-			auth: ['$q', '$location', 'LoginService', function($q, $location, loginService) {
-				if (!loginService.isLoggedIn()) {
+			auth: ['$q', '$location', 'UserStateService', function($q, $location, userStateService) {
+				if (!userStateService.isAuthenticated) {
 					$location.path('/login');
 					$location.replace();
 					$q.reject(new Error('Not logged in'));

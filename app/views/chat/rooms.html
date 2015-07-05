@@ -1,0 +1,12 @@
+<div class="rooms">
+    Rooms
+    <ul>
+        <li ng-repeat="room in ctrl.data.rooms">
+            {{ room.isJoined ? '-' : '+'}}
+            {{ room.name }}
+            <span ng-if="room.id === ctrl.data.currentRoomId">(Current)</span>
+            <a ng-if="room.id !== ctrl.data.currentRoomId"
+               ng-click="ctrl.join(room.id)" href="javascript:void(0)">Join</a>
+        </li>
+    </ul>
+</div>

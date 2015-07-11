@@ -1,0 +1,16 @@
+.message-box {
+	width: 100%;
+	display: flex;
+}
+
+.message-box__input {
+	height: 50px;
+	font-family: Arial, sans-serif;
+
+	flex-grow: 1;
+}
+
+.message-box__submit {
+	height: 50px;
+	width: 150px;
+}

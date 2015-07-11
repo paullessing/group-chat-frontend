@@ -1,0 +1,22 @@
+.message {
+	display: block;
+	line-height: 1.3;
+}
+
+.message__time {
+	font-size: 0.8em;
+
+	&:before {
+		content: '(';
+	}
+	&:after {
+		content: ')';
+	}
+}
+.message__user {
+	font-weight: bold;
+
+	&:after {
+		content: ':';
+	}
+}

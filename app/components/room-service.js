@@ -20,11 +20,28 @@ angular.module('WaffleApp').service('RoomService', ['socket', '$q', 'UserStateSe
 
 	this.join = function(roomId) {
 		self.data.currentRoomId = roomId;
-		socket.emit('room/join', {
-			roomId: roomId
-		});
+		if (!isJoined(roomId)) {
+			socket.emit('room/join', {
+				roomId: roomId
+			});
+		}
 		notifyObservers();
 	};
+
+	function isJoined(roomId) {
+		var room = getRoom(roomId);
+		return room && room.isJoined;
+	}
+
+	function getRoom(roomId) {
+		for (var i = 0; i < self.data.rooms.length; i++) {
+			var room = self.data.rooms[i];
+			if (room.id === roomId) {
+				return room;
+			}
+		}
+		return null;
+	}
 
 	this.addObserver = function(observer) {
 		if (observers.indexOf(observer) === -1) {

@@ -1,4 +1,9 @@
-<form class="messageBox" ng-submit="ctrl.post()">
-    <textarea ng-model="ctrl.message.text" ng-disabled="!ctrl.isInRoom()"></textarea>
-    <input type="submit" />
+<form class="message-box" ng-submit="ctrl.post()">
+    <textarea
+            ng-model="ctrl.message.text"
+            ng-disabled="!ctrl.isInRoom()"
+            class="message-box__input"
+            ng-keydown="ctrl.keyDown($event)"></textarea>
+    <input type="submit" class="message-box__submit"
+           ng-disabled="!ctrl.isInRoom()"/>
 </form>

@@ -18,4 +18,12 @@ angular.module('WaffleApp').directive('waffleMessageBox', function() {
 	this.isInRoom = function() {
 		return !!roomService.data.currentRoomId;
 	};
+
+	this.keyDown = function(event) {
+		console.log(event);
+		if (event.keyCode === 13 && !event.shiftKey) {
+			self.post();
+			event.preventDefault();
+		}
+	};
 }]);

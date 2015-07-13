@@ -20,7 +20,6 @@ angular.module('WaffleApp').directive('waffleMessageBox', function() {
 	};
 
 	this.keyDown = function(event) {
-		console.log(event);
 		if (event.keyCode === 13 && !event.shiftKey) {
 			self.post();
 			event.preventDefault();

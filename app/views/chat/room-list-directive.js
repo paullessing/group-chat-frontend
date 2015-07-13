@@ -1,8 +1,8 @@
-angular.module('WaffleApp').directive('waffleRooms', function() {
+angular.module('WaffleApp').directive('waffleRoomList', function() {
 	return {
 		restrict: 'E',
 		scope: {},
-		templateUrl: 'views/chat/rooms.html',
+		templateUrl: 'views/chat/room-list.html',
 		replace: true,
 		controller: 'RoomListCtrl',
 		controllerAs: 'ctrl'
@@ -13,6 +13,9 @@ angular.module('WaffleApp').directive('waffleRooms', function() {
 	this.data = roomService.data;
 
 	this.join = function(roomId) {
+		roomService.join(roomId);
+	};
+	this.view = function(roomId) {
 		roomService.join(roomId);
 	};
 }]);

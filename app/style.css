@@ -1,0 +1,186 @@
+/* line 17, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, ../scss/generic/_box-sizing.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 2, ../scss/base/_html-body.scss */
+html,
+body {
+  height: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* line 1, ../scss/blocks/_chat.scss */
+.chat {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+/* line 1, ../scss/blocks/_content.scss */
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 1, ../scss/blocks/_message.scss */
+.message {
+  display: block;
+  line-height: 1.3;
+}
+
+/* line 6, ../scss/blocks/_message.scss */
+.message__time {
+  font-size: 0.8em;
+}
+/* line 9, ../scss/blocks/_message.scss */
+.message__time:before {
+  content: '(';
+}
+/* line 12, ../scss/blocks/_message.scss */
+.message__time:after {
+  content: ')';
+}
+
+/* line 16, ../scss/blocks/_message.scss */
+.message__user {
+  font-weight: bold;
+}
+/* line 19, ../scss/blocks/_message.scss */
+.message__user:after {
+  content: ':';
+}
+
+/* line 1, ../scss/blocks/_message-box.scss */
+.message-box {
+  width: 100%;
+  display: flex;
+}
+
+/* line 6, ../scss/blocks/_message-box.scss */
+.message-box__input {
+  height: 50px;
+  font-family: Arial, sans-serif;
+  flex-grow: 1;
+}
+
+/* line 13, ../scss/blocks/_message-box.scss */
+.message-box__submit {
+  height: 50px;
+  width: 150px;
+}
+
+/* line 1, ../scss/blocks/_messages.scss */
+.messages {
+  width: 100%;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* line 1, ../scss/blocks/_room.scss */
+.room {
+  height: 100%;
+  background-color: #fee;
+  padding: 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 1, ../scss/blocks/_room-list.scss */
+.room-list {
+  height: 100%;
+  background-color: #eef;
+  padding: 16px;
+  min-width: 200px;
+  width: 20%;
+  max-width: 400px;
+}
+
+/* line 10, ../scss/blocks/_room-list.scss */
+.room-list__group-title {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+/* line 15, ../scss/blocks/_room-list.scss */
+.room-list__rooms {
+  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+/* line 21, ../scss/blocks/_room-list.scss */
+.room-list__room {
+  padding: 4px 8px;
+  cursor: pointer;
+}
+/* line 25, ../scss/blocks/_room-list.scss */
+.room-list__room:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}

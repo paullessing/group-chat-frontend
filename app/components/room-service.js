@@ -28,6 +28,13 @@ angular.module('WaffleApp').service('RoomService', ['socket', '$q', 'UserStateSe
 		notifyObservers();
 	};
 
+	/**
+	 * @param roomInfo { roomName: string, roomDescription: ?string }
+	 */
+	this.create = function(roomInfo) {
+		socket.emit('room/create', roomInfo);
+	}
+
 	function isJoined(roomId) {
 		var room = getRoom(roomId);
 		return room && room.isJoined;

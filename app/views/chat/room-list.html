@@ -1,0 +1,21 @@
+<div class="room-list">
+	<h2 class="room-list__group-title">Joined</h2>
+	<ul class="room-list__rooms">
+		<li ng-repeat="room in ctrl.data.rooms | filter:{isJoined:true}"
+            class="room-list__room"
+            ng-click="ctrl.view(room.id)"
+            ng-class="room.id === ctrl.data.currentRoomId && 'current'">
+			{{ room.name }}
+		</li>
+	</ul>
+    <h2 class="room-list__group-title">Lobby</h2>
+	<ul class="room-list__rooms">
+		<li ng-repeat="room in ctrl.data.rooms | filter:{isJoined:false}"
+            class="room-list__room"
+            ng-click="ctrl.join(room.id)">
+			{{ room.name }}
+		</li>
+	</ul>
+
+    <waffle-new-room-form></waffle-new-room-form>
+</div>

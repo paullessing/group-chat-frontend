@@ -11,8 +11,10 @@ angular.module('WaffleApp').directive('waffleLogin', function() {
 	var self = this;
 
 	this.login = function() {
-		userStateService.login(this.user).then(function() {
-			$location.path('/');
-		});
+		userStateService.login(self.user)
+			.then(function() {
+                console.log("Login has been resolved");
+				$location.path('/');
+			});
 	};
 }]);

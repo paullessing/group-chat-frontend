@@ -9,10 +9,13 @@ angular.module('WaffleApp').directive('waffleMessageBox', function() {
 	};
 }).controller('MessageBoxCtrl', ['MessageService', 'RoomService', function(messageService, roomService) {
 	var self = this;
+    self.message = {};
 
 	this.post = function() {
-		messageService.post(self.message.text);
-		self.message = {};
+        if (self.message.text) {
+            messageService.post(self.message.text);
+            self.message = {};
+        }
 	};
 
 	this.isInRoom = function() {

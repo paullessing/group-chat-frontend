@@ -21,7 +21,9 @@ angular.module('WaffleApp', [
 		templateUrl: 'views/chat/chat.html',
 		resolve: {
 			auth: ['$q', '$location', 'UserStateService', function($q, $location, userStateService) {
+                console.log("Checking auth for user", userStateService.isAuthenticated)
 				if (!userStateService.isAuthenticated) {
+                    console.log("User is not authenticated");
 					$location.path('/login');
 					$location.replace();
 					$q.reject(new Error('Not logged in'));
